@@ -24,10 +24,6 @@ app.get('/books', (req, res) => {
     res.json(books);
 });
 
-app.listen(port, () => {
-    console.log(`Express app listening on port ${port}`)
-})
-
 app.post('/books', (req, res) => {
     const newBook = req.body; // Get the new book data from the request body
     newBook.id = books.length + 1; // Assign a unique ID
@@ -73,3 +69,7 @@ app.delete('/books/:id', (req, res) => {
         res.status(404).send('Book not found'); // Send error for non-existent book
     }
 });
+
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+ });
