@@ -1,0 +1,9 @@
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "Your Book Title Here",
+  "author": "Your Book Author Here"
+}
+###
+GET http://localhost:3000/books
